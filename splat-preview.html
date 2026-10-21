@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splat Preview</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #0d0f10; }
+      canvas { display: block; }
+      #hud {
+        position: fixed; left: 14px; top: 14px; z-index: 2;
+        font: 12px/1.65 ui-monospace, Menlo, Consolas, monospace;
+        color: #e8e4dc; background: rgba(12, 14, 15, 0.76);
+        border: 1px solid rgba(255,255,255,0.14);
+        padding: 10px 14px; border-radius: 4px; white-space: pre;
+        pointer-events: none;
+      }
+      #bar {
+        position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+        z-index: 2; display: flex; gap: 6px;
+      }
+      #bar a {
+        font: 12px ui-monospace, monospace; color: #ded8cc; text-decoration: none;
+        padding: 6px 12px; border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(12,14,15,0.7); border-radius: 999px;
+      }
+      #bar a.on { color: #14110c; background: #e8d9b8; border-color: #e8d9b8; }
+    </style>
+  </head>
+  <body>
+    <div id="hud">loading…</div>
+    <div id="bar">
+      <a data-scene="flowers" href="?scene=flowers">flowers</a>
+      <a data-scene="garden" href="?scene=garden">garden</a>
+      <a data-scene="bonsai" href="?scene=bonsai">bonsai</a>
+    </div>
+    <script type="module" src="/src/splatPreview.ts"></script>
+  </body>
+</html>

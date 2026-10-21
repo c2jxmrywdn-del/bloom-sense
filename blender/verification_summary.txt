@@ -1,0 +1,7 @@
+BloomSense flower validation
+rose     petals=26  stamens=30  verts=12604  glb=2.19MB intersections=0
+lotus    petals=24  stamens=0   verts=5427   glb=0.86MB intersections=0
+lily     petals=6   stamens=6   verts=2778   glb=0.39MB intersections=0
+tulip    petals=6   stamens=6   verts=2750   glb=0.39MB intersections=0
+cherry   petals=5   stamens=16  verts=3599   glb=0.52MB intersections=0
+daisy    petals=32  stamens=0   verts=5266   glb=0.60MB intersections=0

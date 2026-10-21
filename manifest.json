@@ -1,0 +1,70 @@
+{
+  "stages": 19,
+  "mode": "both",
+  "source": "D:/blender-5.3.0-beta+v53.1878423c3717-windows.amd64-release/Blander-Deepseek/UE5-XR/blender/build_flowers.py",
+  "static_template": "static/<flower>/static_json_export per-stage baked mesh, no morph targets",
+  "morph_template": "morph/<flower>/morph_export with 6 morph targets b1..b6 and stage weights baked into JSON",
+  "flowers": [
+    {
+      "id": "lotus",
+      "name": "月露莲华",
+      "latin": "Nelumbo nucifera",
+      "dir": "lotus",
+      "petals": 24,
+      "stamens": 0,
+      "intersections": 0,
+      "samples": 19,
+      "pairs_checked": 996,
+      "manifest": "lotus/manifest.json"
+    },
+    {
+      "id": "lily",
+      "name": "鎏金百合",
+      "latin": "Lilium candidum",
+      "dir": "lily",
+      "petals": 6,
+      "stamens": 6,
+      "intersections": 0,
+      "samples": 19,
+      "pairs_checked": 161,
+      "manifest": "lily/manifest.json"
+    },
+    {
+      "id": "tulip",
+      "name": "琥珀郁金",
+      "latin": "Tulipa gesneriana",
+      "dir": "tulip",
+      "petals": 6,
+      "stamens": 6,
+      "intersections": 0,
+      "samples": 19,
+      "pairs_checked": 103,
+      "manifest": "tulip/manifest.json"
+    },
+    {
+      "id": "cherry",
+      "name": "春雪樱",
+      "latin": "Prunus serrulata",
+      "dir": "cherry",
+      "petals": 5,
+      "stamens": 16,
+      "intersections": 0,
+      "samples": 19,
+      "pairs_checked": 494,
+      "manifest": "cherry/manifest.json"
+    },
+    {
+      "id": "daisy",
+      "name": "浮光雏菊",
+      "latin": "Bellis perennis",
+      "dir": "daisy",
+      "petals": 32,
+      "stamens": 0,
+      "intersections": 0,
+      "samples": 19,
+      "pairs_checked": 1571,
+      "manifest": "daisy/manifest.json",
+      "note": "bloom windows extended to (0.0,0.90)/(0.12,1.00) so all 19 stages are geometrically distinct"
+    }
+  ]
+}

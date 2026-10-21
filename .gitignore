@@ -1,0 +1,39 @@
+# 依赖与构建产物
+node_modules/
+dist/
+*.tsbuildinfo
+
+# 3DGS 原始点云（单个 0.3–1.1 GB，超出 GitHub 100MB 限制，用 splat_src/fetch_assets.py 重新下载）
+splat_src/*.ply
+splat_src/*.part
+splat_src/*.log
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本地覆盖配置
+*.local
+.env
+.env.*
+
+# 开发过程产物（最终资产在 public/，本地保留不入库）
+/cherry/
+/daisy/
+/daisy_extended/
+/lily/
+/lotus/
+/tulip/
+/bloom_frames_five/
+/bloom_variants_other_five/
+/bloom_variants_rose_template/
+/skill-test-output/
+/validation/
+rose_template*
+bloom_*.png
+bloom_*.log
+__pycache__/
+*.pyc
+bloom_variants_other_five_README.md

@@ -1,0 +1,114 @@
+{
+  "flowers": [
+    {
+      "id": "rose",
+      "name": "焰影玫瑰",
+      "latin": "Rosa × damascena",
+      "petals": 26,
+      "stamens": 30,
+      "verts": 12604,
+      "glb_mb": 2.193,
+      "intersections": 0
+    },
+    {
+      "id": "lotus",
+      "name": "月露莲华",
+      "latin": "Nelumbo nucifera",
+      "petals": 24,
+      "stamens": 0,
+      "verts": 5427,
+      "glb_mb": 0.862,
+      "intersections": 0
+    },
+    {
+      "id": "lily",
+      "name": "鎏金百合",
+      "latin": "Lilium candidum",
+      "petals": 6,
+      "stamens": 6,
+      "verts": 2778,
+      "glb_mb": 0.392,
+      "intersections": 0
+    },
+    {
+      "id": "tulip",
+      "name": "琥珀郁金",
+      "latin": "Tulipa gesneriana",
+      "petals": 6,
+      "stamens": 6,
+      "verts": 2750,
+      "glb_mb": 0.391,
+      "intersections": 0
+    },
+    {
+      "id": "cherry",
+      "name": "春雪樱",
+      "latin": "Prunus serrulata",
+      "petals": 5,
+      "stamens": 16,
+      "verts": 3599,
+      "glb_mb": 0.515,
+      "intersections": 0
+    },
+    {
+      "id": "daisy",
+      "name": "浮光雏菊",
+      "latin": "Bellis perennis",
+      "petals": 32,
+      "stamens": 0,
+      "verts": 5266,
+      "glb_mb": 0.597,
+      "intersections": 0
+    }
+  ],
+  "reports": [
+    {
+      "flower": "rose",
+      "samples": 19,
+      "conflicts": [],
+      "pairs_checked": 2475,
+      "by_t": {},
+      "conflict_pairs": 0
+    },
+    {
+      "flower": "lotus",
+      "samples": 19,
+      "conflicts": [],
+      "pairs_checked": 996,
+      "by_t": {},
+      "conflict_pairs": 0
+    },
+    {
+      "flower": "lily",
+      "samples": 19,
+      "conflicts": [],
+      "pairs_checked": 161,
+      "by_t": {},
+      "conflict_pairs": 0
+    },
+    {
+      "flower": "tulip",
+      "samples": 19,
+      "conflicts": [],
+      "pairs_checked": 103,
+      "by_t": {},
+      "conflict_pairs": 0
+    },
+    {
+      "flower": "cherry",
+      "samples": 19,
+      "conflicts": [],
+      "pairs_checked": 494,
+      "by_t": {},
+      "conflict_pairs": 0
+    },
+    {
+      "flower": "daisy",
+      "samples": 19,
+      "conflicts": [],
+      "pairs_checked": 1633,
+      "by_t": {},
+      "conflict_pairs": 0
+    }
+  ]
+}
