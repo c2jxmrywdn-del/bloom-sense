@@ -96,7 +96,7 @@ export function Experience({ env }: { env: number }) {
   const dpr: [number, number] =
     stageMode === 'real'
       ? quality === 'high'
-        ? [1, 2]
+        ? [1, 2.5]
         : [1, 1.35]
       : quality === 'high'
         ? [1, 1.75]
