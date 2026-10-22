@@ -58,6 +58,7 @@ export function GaussianStage() {
         renderer: gl,
         maxStdDev: Math.sqrt(5),
         minAlpha: 2 / 255,
+        maxPixelRadius: 128,
         accumExtSplats: true,
       }),
     [gl]
@@ -348,11 +349,17 @@ export function GaussianStage() {
     const c = document.createElement('canvas')
     c.width = c.height = 256
     const ctx = c.getContext('2d')!
-    const col = new THREE.Color(scene.ground.color)
-    const rgb = `${Math.round(col.r * 255)},${Math.round(col.g * 255)},${Math.round(col.b * 255)}`
+    // 直接按 sRGB 字节取色：贴图标记为 SRGBColorSpace，若经 THREE.Color 会被线性化，
+    // 深色（如草地绿）会被压成近黑，导致"补的洞还是黑的"
+    const hex = scene.ground.color.replace('#', '')
+    const r8 = parseInt(hex.substring(0, 2), 16)
+    const g8 = parseInt(hex.substring(2, 4), 16)
+    const b8 = parseInt(hex.substring(4, 6), 16)
+    const rgb = `${r8},${g8},${b8}`
     const g = ctx.createRadialGradient(128, 128, 0, 128, 128, 128)
-    g.addColorStop(0, `rgba(${rgb},0.95)`)
-    g.addColorStop(0.6, `rgba(${rgb},0.8)`)
+    // 内圈到 0.86 半径保持几乎不透明，只在最外圈淡出，避免掠射角露出黑底
+    g.addColorStop(0, `rgba(${rgb},1)`)
+    g.addColorStop(0.86, `rgba(${rgb},0.98)`)
     g.addColorStop(1, `rgba(${rgb},0)`)
     ctx.fillStyle = g
     ctx.fillRect(0, 0, 256, 256)
@@ -372,7 +379,7 @@ export function GaussianStage() {
           renderOrder={-2}
         >
           <circleGeometry args={[scene.ground.radius, 72]} />
-          <meshBasicMaterial map={groundTex} side={THREE.DoubleSide} depthWrite={false} transparent />
+          <meshBasicMaterial map={groundTex} side={THREE.DoubleSide} depthWrite={false} transparent fog={false} />
         </mesh>
       ) : null}
     </group>

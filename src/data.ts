@@ -329,8 +329,8 @@ export const REAL_SCENES: RealScene[] = [
     splats: '3.14M',
     source: 'INRIA 3DGS · Mip-NeRF 360 flowers',
     exposure: 0.98,
-    bounds: { zoomMax: 2.4, pitchMax: 0.68, yawMax: 3.2 },
-    ground: { x: 0, y: 2.6, z: 1, radius: 60, color: '#33421d' },
+    bounds: { zoomMax: 1.35, pitchMax: 0.5, yawMax: 3.2 },
+    ground: { x: 0, y: 2.6, z: 1, radius: 260, color: '#4a5a2c' },
   },
   {
     id: 'bonsai',
@@ -367,6 +367,6 @@ export const REAL_SCENES: RealScene[] = [
     source: 'INRIA 3DGS · Mip-NeRF 360 garden',
     exposure: 0.98,
     bounds: { zoomMax: 1.9, pitchMax: 1.15, yawMax: 3.2 },
-    ground: { x: 0, y: 4.0, z: 1, radius: 55, color: '#3d4d26' },
+    ground: { x: 0, y: 4.0, z: 1, radius: 260, color: '#3d4d26' },
   },
 ]
