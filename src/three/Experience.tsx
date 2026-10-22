@@ -9,6 +9,7 @@ import { GaussianStage } from './GaussianStage'
 import { PostFX } from './PostFX'
 import { useApp } from '../store'
 import { ENVIRONMENTS } from '../data'
+import { isMobile } from '../mobile'
 
 function RoomEnv() {
   const { gl, scene } = useThree()
@@ -92,14 +93,20 @@ function SceneContent({ env }: { env: number }) {
 export function Experience({ env }: { env: number }) {
   const quality = useApp((s) => s.quality)
   const stageMode = useApp((s) => s.stageMode)
-  // 3DGS 实景按全分辨率渲染，花瓣与石纹等细节更锐利
+  // 3DGS 实景按全分辨率渲染，花瓣与石纹等细节更锐利；
+  // 移动端自动降级：高画质 DPR 上限压到 1.5，避免大模型 + 高 DPR 拖垮帧率
+  const mobile = isMobile()
   const dpr: [number, number] =
     stageMode === 'real'
       ? quality === 'high'
-        ? [1, 2.5]
+        ? mobile
+          ? [1, 1.5]
+          : [1, 2.5]
         : [1, 1.35]
       : quality === 'high'
-        ? [1, 1.75]
+        ? mobile
+          ? [1, 1.5]
+          : [1, 1.75]
         : [1, 1.15]
   return (
     <Canvas

@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { FLOWERS, ENVIRONMENTS, REAL_SCENES } from './data'
+import { isMobile } from './mobile'
 
 export type Phase = 'intro' | 'loading' | 'ready'
 export type HandMode = 'camera' | 'off'
@@ -184,7 +185,7 @@ export const useApp = create<AppState>((set, get) => ({
   hideUI: false,
   camPanelOpen: true,
   soundOn: false,
-  quality: 'high',
+  quality: isMobile() ? 'balanced' : 'high',
   prefs: { dragSensitivity: 1, gestureSensitivity: 1, invertLook: false, reduceMotion: false },
   thumbnails: Object.fromEntries(FLOWERS.map((f) => [f.id, f.preview])),
   toasts: [],
